@@ -1,0 +1,39 @@
+
+This file contains descriptions and steps for retraining/using our FMNet model.
+Authorized by Wenhuan Kuang 
+Date: Nov 23, 2020
+If having any questions or suggestions, please email to: kuangwh@ustc.edu.cn
+
+General description:
+      We have provided several files as follows:
+      The FMNet model architecture --> train.py
+      The FMNet well-trained model --> fmnet.cnn
+      The FMNet prediction code    --> predict.py
+      A small test dataset         --> test_data
+
+      Additionally, we also provide:
+      Our test output results      --> test_out_ours
+      Kagan angle calculation code --> Plot_Kagan_angle
+
+1, System requirements:
+   It is trained and tested on Linux system,
+      Linux version 4.4.0-31-generic (buildd@lgw01-16) 
+       (gcc version 5.3.1 20160413 (Ubuntu 5.3.1-14ubuntu2.1) )
+      
+   Python is required. The version we used: Python 3.5.2
+
+2, No need to installation
+
+3, We have provided a demo of testing dataset,
+   To run the prediction demo, type in "python predict.py"
+   Expected output are predicted probability stored under "test_output"
+   Output files are saved in matlab format, each file represents one test sample
+   We have provided our predicted outputs under "test_output_ours" for your comparison
+
+4, To plot the Kagan angle histogram using Matlab, go to folder "Plot_Kagan_angle"
+   (1) Plot_kagan.m is for plotting the Kagan angle distribution histogram
+   (2) Plot_predicted_probability.m is for plotting the predicted probability.
+   (3) sub_kang.m is a subroutine from Matlab open source library for calculating Kagan angle
+   (4) sub_conpa.m is a subroutine for converting the output to strike,dip,and rake
+ 
+   You can set the data path to our results '../test_output_ours/predict_%06d.mat' to compare.
